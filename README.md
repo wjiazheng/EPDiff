@@ -1,6 +1,6 @@
 # EPDiff
 
-The evaluation code for "EPDiff: Erasure Perception Diffusion Model for Unsupervised Anomaly Detection in Preoperative Multimodal Images", which is submitted to IEEE Transactions on Medical Imaging.
+The evaluation code for the paper "EPDiff: Erasure Perception Diffusion Model for Unsupervised Anomaly Detection in Preoperative Multimodal Images", which is submitted to IEEE Transactions on Medical Imaging.
 
 Our implementation is based on [DDPM](https://github.com/dome272/Diffusion-Models-pytorch) and [ANDi](https://github.com/alexanderfrotscher/andi). The entire code will be updated after acceptance.
 
