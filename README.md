@@ -15,7 +15,7 @@ Download the dataset, and change the dataset_path in eval.yml
 
 ### 3. Evaluation
 
-The evaluation model can be downloaded from Baidu Netdisk or Google Drive.
+The evaluation model can be downloaded from Baidu Netdisk or [Google Drive](https://drive.google.com/file/d/1_EePlNxMPZHlPCI5ptAfncQErHEy-abr/view?usp=sharing).
 
 python3 eval.py
 
