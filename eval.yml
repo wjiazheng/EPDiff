@@ -1,0 +1,61 @@
+### eval.yml for EPDiff
+
+#
+# Eval Hyperparameters
+#
+dataset: brats
+dataset_path : "/data3/wjz/dataset/BRATS2021/BRATS21" # path to brats21 dataset
+path_to_csv : "./brats_test.csv"
+batch_size : 1  # number of volumes load into the gpu
+size_splits: 155  # number of slices processed in gpu for each volume at the same time
+workers : 4  # cpu data loaders
+seed : 73 # 73
+output : "./EPDiff_brats21.csv"
+output_mf : "./EPDif_mf7_brats21.csv"
+
+visualization: " "
+
+# params for optimal dice calculation
+thr_start: 0.01
+thr_end: 0.3
+thr_step: 0.001
+
+kernel_size: 7  # median filtering kernel
+rank: 3  # binary dilation rank for yen
+connectivity: 1  # binary dilation connectivity for yen
+
+#
+# EPDiff specific parameters
+#
+start: 75
+stop: 300
+
+gmean: True
+gfuse: False
+
+max: False
+single: False
+att: False
+att+: True
+x: 0.2
+n: 0.5
+f: 0.3
+
+#
+# Model Hyperparameters
+model : "./best_4.147_ckpt.pt"
+size : 128
+channels : 4 # the same number as modality
+
+#
+# Diffusion Hyperparameters
+#
+noise_steps: 1000
+beta_start: 1.0e-4
+beta_end: 0.02
+
+#
+# Noise type during eval
+#
+pyramid : False # can be False and the pyramid model can be used
+discount : 0.8  #only needed for pyramid noise
